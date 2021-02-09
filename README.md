@@ -27,7 +27,7 @@ This is obviously extremely problematic and up until recently, there was a prett
 <img src = "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/a/f/c/afc958b2135b9c8b1e7b28f8c471d0ec2ada84d4.png">
 However, recently Synapse X has bypassed this by replacing the function with a new cclosure function (C function). In a running example of an "anti-kick" script, it would look like this: <img src = "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/c/f/0/cf0dc0f06a8af088a46fa5bac50d7e213f303e76.png">
 
-This signifies how important it is to handle this type of logic on the server. 
+This signifies how important it is to handle this type of logic on the server. Even if you do detect exploits on the client, you can't kick them locally, and if you were to try to tell the server about it, the client could just lie.
 
 <h1>Conclusion</h1>
 Exploits makes the gameplay's atmosphere very dreadful for some players, so it is understandable that you would like to do anything to prevent it. However, it is important to know that it is impossible to end exploiting. While exploiters are large in numbers, they make up a small portion of your playerbase, and it is much more important to prioritise them. There's not much you as an individual can do. There are extreme geniuses out there that has made anti-cheats that predicts the clients' next interactions and runs sanity checks on that but realistically implementing those are expensive and you should NOT focus on them ever. Code smart, secure your remotes and patch by exploit.
