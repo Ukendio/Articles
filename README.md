@@ -13,21 +13,19 @@ Exploiters take use of tools such as Synapse X's decompiler to read client scrip
 <h1>The combat</h1>
 Few developers combatted the injection of Synapse X by reading malicious clients' memory usages and kicking them on spikes. While it gave false-positives, it did work for a while, until the implementation of auto-attach came long. Which is a boolean that the exploiter can enable to directly inject as soon as the game starts for them.
 
-Synapse X runs on the principle that Lua uses metatables. Metatables allows for vastly more advanced logic to be applied onto the regular tables (**cough** shitty hashtables). They're used everywhere, whether you were conscious of it or not. ![image|690x147](upload://xecMdKPYuOb9btatxGxkSkoXpUg.png) 
+Synapse X runs on the principle that Lua uses metatables. Metatables allows for vastly more advanced logic to be applied onto the regular tables (**cough** shitty hashtables). They're used everywhere, whether you were conscious of it or not. <img src = "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/e/8/e/e8e2d74c97e46986834260f410f695e8f86eafac.png">
 
 Simply indexing the character of the client calls on metamethods (...exclusive functions of metatables) 3 times. Synapse X takes advantage of this fact, it allows exploiters to hook onto metatables and run implicit functions that you never intended for. Remote Events are objects, and of course, they have metatables. So everytime you call :FireServer, you implicitly invoke the namecall metamethod which exploiters can easily hook onto and change all the arguments, or preventing them from being sent at all.
-
-![image|690x279](upload://4WTsvkP9nOIvUmZGjwWxmzfAbKV.png)  
+<img src = "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/2/2/b/22b10099823e633399ee8445f38bace1d5bf26f9.png">
 
 Which is why you will constantly hear experienced developers nag you about NEVER trusting the client! On the topic of measures on the client, the reason why you should never have anti-cheat on the client is 1. they can be disabled, modified and/or bypassed. Using aforementioned knowledge, they can simply do this:
 
-![image|690x287](upload://g14yP5hYp8XAxsMxvuwHl0WEsJm.png) 
+<img src = "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/7/0/4/7041d9d725bd488a6639bb2ac858dd93667bc18c.png>
 
 This is obviously extremely problematic and up until recently, there was a pretty profound way to combat this. It was via checking whether there was any metatable tampering at all.
 
-![image|588x246](upload://p54WhUTDyNqNtcKUA0L7AF2vBE8.png) 
-
-However, recently Synapse X has bypassed this by replacing the function with a new cclosure function (C function). In a running example of an "anti-kick" script, it would look like this: ![image|690x95](upload://txGiOAbZcMzgGEzOMgXGXVCOwmO.png) 
+<img src = "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/a/f/c/afc958b2135b9c8b1e7b28f8c471d0ec2ada84d4.png">
+However, recently Synapse X has bypassed this by replacing the function with a new cclosure function (C function). In a running example of an "anti-kick" script, it would look like this: <img src = "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/c/f/0/cf0dc0f06a8af088a46fa5bac50d7e213f303e76.png">
 
 This signifies how important it is to handle this type of logic on the server. 
 
