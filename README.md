@@ -20,7 +20,7 @@ Simply indexing the character of the client calls on metamethods (...exclusive f
 
 Which is why you will constantly hear experienced developers nag you about NEVER trusting the client! On the topic of measures on the client, the reason why you should never have anti-cheat on the client is 1. they can be disabled, modified and/or bypassed. Using aforementioned knowledge, they can simply do this:
 
-<img src = "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/7/0/4/7041d9d725bd488a6639bb2ac858dd93667bc18c.png>
+<img src = "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/7/0/4/7041d9d725bd488a6639bb2ac858dd93667bc18c.png">
 
 This is obviously extremely problematic and up until recently, there was a pretty profound way to combat this. It was via checking whether there was any metatable tampering at all.
 
