@@ -1,0 +1,32 @@
+## **DISCLAIMER: Minty is not finished and may not be open-sourced** 
+
+![image|689x344](upload://v8CRuhfRyVuMo41T0IeFv9ABbl3.png)  
+
+## Here's why you should care: 
+
+Available alternatives are great for their purposes. Minty doesn't exist to succeed any of these alternatives such as: [DataStore2](https://github.com/Kampfkarren/Roblox/tree/master/DataStore2), [ProfileService](https://github.com/MadStudioRoblox/ProfileService), [QuickSave](https://github.com/evaera/Quicksave), [DiceDataStore](https://github.com/Mullets-Gavin/DiceDataStore), and MANY MORE! 
+
+However Minty's core values are inherently different. Session-locking is amazing (...see Quicksave and ProfileService for reference), it is the second best-thing to transactions. But in hindsight, that's not the end of item duplication that can instance from trading. Minty provides a solution. Minty currently runs on the principle of Two Phase Commit Protocol. A pattern to implement synchronous transactions to NoSQL databases. At the moment, it should be your deal-breaker. 
+
+Minty is for big-production games, it is currently being deployed into a game with a huge codebase, implementing features CAN be detrimental and break things you never expected to break. Which is why Minty is a typescript-first implementation.
+
+![image|690x188](upload://a43dchBx8VfJHZNq9d79GNR9cuD.png)  
+
+Huge games, expect huge data. Minty has auto-sharding, meaning on read it will divide up data into manageable chunks when necessary! Sometimes a dataset is too large to be stored into a single datastore, sharding allows a datastore cluster to scale along with its data and traffic growth! ![image|690x229](upload://hWvhRpxlrfJus2Z9nk9Ywu6UOz.jpeg) 
+
+Finally the last feature worth mentioning is read-replication. Incidents will happen no matter how good the software is! Hence why we use **read replicas** to copy a primary instance that reflects changes to the primary key in real-time. Read replication lets you offload read request or analytics traffic from the primary easily and Minty provides advanced tooling to let you interface with that data at any moment from anywhere. Example: Hear about an incident regarding a player's data being corrupted? Simple command through the Minty discord bot can let you rollback its state.
+
+We developers have lives, and Minty exists to help handle data in an easy way but most importantly with safety.
+
+## ![image|40x40](upload://f5WIBV22VlYmN6rVcS78qKJ89w6.png) Why **Roblox-TS** <small>(typescript)</small>
+
+Minty :green_heart: [Roblox-TS](https://roblox-ts.com/). 
+Roblox-TS aligns with our vision a lot. Typescript is ideal for huge codebases managed by teams but roblox-TS gives us developers confidence that when implementing features that we won't make some silly mistake.
+
+## Available for download? 
+
+No. At least not yet. The more users of Minty, our online tooling gets slower. The team behind Minty actively works on setting up server routes to make sure Minty is always available. There's limited available data and we don't have the necessary funds to infinitely open more servers and increase the bandwidth. 
+
+Hence Minty won't be free, not anytime soon. With more supporters, there's a chance we provide a freemium model where the online tooling is available only for premium users. We don't know but hopefully we get enough support from you guys to know that there is a market in need of Minty :smiling_face_with_three_hearts:. 
+
+Have any questions? Please ask below and I will do my best to answer them.
